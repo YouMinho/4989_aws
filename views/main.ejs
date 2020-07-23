@@ -14,22 +14,18 @@
             <% }%>
             <!-- Search Section -->
 
-            <form method="POST" action="">
-                <div class="row">
-                    <div class="input-group col-4">
-                        <input type="text" style="width: 300px;" class="form-control" id="keyword" name="keyword">
-                    </div>
-                    <div class="input-group-btn col-2">
-                        <button class="btn btn-secondary" type="submit">검색</button>
-                    </div>
-
-                    <div class="col-6 text-right">
-                        <% if(user.userid) { %>
-                        <a href="/item_add"><button class="btn btn-secondary" type="button">물품 올리기</button></a>
-                        <% }%>
-                    </div>
-                </div>
+            <form class="form-inline" method="POST" action="">
+                    <div class="input-group w-100">
+                        <input type="text"  class="form-control" id="keyword" name="keyword" placeholder="검색어를 입력하세요.">
+                        <button class="mx-2 btn btn-secondary" type="submit">검색</button>
+                            <% if(user.userid) { %>
+                            <button class="btn btn-secondary" type="button" onclick="location.href='/item_add'">물품 올리기</button>
+                            <% }%>
+                    </div>  
             </form>
+                    
+                
+            
             <br>
 
             <!-- Portfolio Section -->
